@@ -5,7 +5,6 @@
 #include <cstdlib>
 using namespace std;
 
-
 int Plaintext[100];//明文
 long long Ciphertext[100];//密文
 int n, e = 0, d;
@@ -13,7 +12,6 @@ int n, e = 0, d;
 //二进制转换
 int BianaryTransform(int num, int bin_num[])
 {
-
 	int i = 0, mod = 0;
 
 	//转换为二进制，逆向暂存temp[]数组中
@@ -67,7 +65,6 @@ int ProducePrimeNumber(int prime[])
 	
 	return c;
 }
-
 
 //欧几里得扩展算法
 int Exgcd(int m, int n, int &x)
@@ -156,17 +153,21 @@ void RSA_Initialize()
 	}
 #endif
 #if 1
-	for (int i = 2; i< On; i++){
+	for (int i = 2; i< On; i++)
+	{
 		int g = maxDivisor(i, On);
-		if (g == 1){
+		if (g == 1)
+		{
 			e = i;
 			break;
 		}
 	}
 	//私有密钥生成
-	for (int i = 1;; i++){
+	for (int i = 1;; i++)
+	{
 		int temp = ramainder(e * i, On);
-		if (temp == 1){
+		if (temp == 1)
+		{
 			d = i;
 			break;
 		}
